@@ -1,0 +1,25 @@
+﻿/* Container behind the animation */
+$container-width: 90px !default;
+$container-height: 90px !default;
+$container-color: #ddd !default;
+$container-rounding: 45px !default;
+$container-shadow: 1px 1px 3px (#fff - $container-color);
+
+/* Number of 'spokes' in the animation, these are the individual shapes. Need a .loading-dot per each spoke in the html */
+$number-of-spokes: 18 !default; 
+
+/* Spoke properties: width, height, rounding (box-radius), and the size of the hub (how far out each spoke's height center is translated from center) */
+$spoke-width: 8px !default;
+$spoke-height: 8px !default;
+$spoke-roundedness: 4px !default;
+$hub-size: 30px !default;
+
+/* Colors of the spokes in the animation */
+$colors: #113 #118 !default;
+
+/* Speed of the animation */
+$speed: 1.2s !default;
+
+/* Color and size/bloom of the shadow in the animation */
+$chase-color: (#fff - $container-color) !default;
+$chase-size: 10px !default;

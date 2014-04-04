@@ -1,0 +1,65 @@
+﻿@import "variables";
+
+.loading {
+	position: fixed;
+	top: 48%;
+	left: 48%;
+	width: $container-width;
+	height: $container-height;
+	background: $container-color;
+	border-radius: $container-rounding;
+	box-shadow: $container-shadow;
+}
+
+.loading-dot {
+	position: absolute;
+	top: (($container-height / 2.0) - ($spoke-width) / 2.0);
+	left: (($container-width / 2.0) - ($spoke-height) / 2.0);
+	display: block;
+	width: $spoke-height;
+	height: $spoke-width;
+	background: transparent;
+	border-radius: $spoke-roundedness;
+	
+	transform: translateX($hub-size);
+	animation-duration: $speed;
+	animation-iteration-count: infinite;
+	animation-name: chase;
+	animation-timing-function: ease-in-out;
+	
+}
+
+@keyframes chase{
+    @for $i from 2 through length($colors) {
+	  $color: nth($colors, $i);
+	  $break: 0% +((100.0 / (length($colors)+1)) * ($i));
+	  
+	  #{$break} {
+		background-color: $color;
+	  }
+	}
+	
+	0% {
+		box-shadow: 0px 0px 0px $chase-color;
+		background-color: nth($colors, 1);
+	}
+	
+	50% {
+		box-shadow: 0px 0px $chase-size $chase-color;
+	}
+	
+	100% {
+		box-shadow: 0px 0px 0px $chase-color;
+		background-color: nth($colors, 1);
+	}
+}
+
+@for $i from 2 through $number-of-spokes {
+	$animation-delay: 0s + ($i - 1) * ($speed / $number-of-spokes);
+	$rotate-angle: 0deg +($i - 1) * (360 / $number-of-spokes);
+	
+	.loading-dot:nth-child(#{$i}) {
+		transform: rotate($rotate-angle) translateX($hub-size);
+		animation-delay: $animation-delay;
+	}
+}
