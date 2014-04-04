@@ -11,7 +11,7 @@ Inspired by (http://codepen.io/hakimel/full/CxliK)
 `sass/_variables.scss` contains the variables used to customize the display:
 
 _Container behind the animation_  
-`$container-width`: width of the containing  
+`$container-width`: width of the container  
 `$container-height`: height of the container  
 `$container-color`: background coloring of the container  
 `$container-rounding`: rounding / border-radius of the container  
