@@ -18,17 +18,17 @@ There is one issue I'd like to find a solution for. Particularly, when the spoke
       <td>Safari</td>
       <td>Firefox</td>
       <td>Chrome</td>
-      <td><=IE9</td>
+      <td>&lt;=IE9</td>
       <td>IE10+</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>âœ”</td>
-      <td>âœ”</td>
-      <td>âœ”</td>
-      <td>â€</td>
-      <td>âœ”</td>
+      <td>&#x2713;</td>
+      <td>&#x2713;</td>
+      <td>&#x2713;</td>
+      <td>&#x2717;</td>
+      <td>&#x2713;</td>
     </tr>
   </tbody>
 </table>
